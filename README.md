@@ -13,7 +13,7 @@ This application is made on flask framework with vvisual ccrossing free weather 
 ### Deployment doc 
 
 - Clone the repo 
-    ```bash git clone https://github.com/Abhisheksanj/weather-app.git ```
+    ``` git clone https://github.com/Abhisheksanj/weather-app.git ```
 - Now install the requirment 
     ```python 
         pip install request 
