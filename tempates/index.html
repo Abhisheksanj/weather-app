@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Weather App</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label>Enter a city:</label>
+                <input type="text" name="city" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Get weather</button>
+        </form>
+
+        {% if weather_data %}
+        <div class="mt-5">
+            <h2>{{ weather_data['resolvedAddress'] }}</h2>
+            <p>Temperature: {{ weather_data['days'][0]['temp'] }} &deg;C</p>
+            <p>Feels like: {{ weather_data['days'][0]['feelslike'] }} &deg;C</p>
+            <p>Humidity: {{ weather_data['days'][0]['humidity'] }}%</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-6v1KvpzXl5L3XtT2y5E1w0XvXclFypstTFE0Uyj31tUZETcQIy7wnW2pAf3f5StP"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
